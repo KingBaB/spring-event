@@ -1,0 +1,40 @@
+spring:
+  redis:
+    host: redis-ali-test.redis.rds.aliyuncs.com
+    ssl: false
+    password: S6n5Y7b81wRrJnKv
+    port: 6379
+    database: 0
+  kafka:
+    producer:
+      acks: 1
+      retries: 1
+      batch-size: 16384
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      enable-auto-commit: true
+      auto-commit-interval: 2000ms
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: ai-center
+    bootstrap-servers: kafka-ali-test.xmars.com:39333
+  datasource:
+    dynamic:
+      primary: main
+      strict: false
+      datasource:
+        main:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          password: g8ghX38GXohzOZ[O
+          url: jdbc:mysql://mysql-ali-test.xmars.com:3307/xplatform_ai?useUnicode=yes&characterEncoding=UTF-8
+          username: devops
+        sd:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          password: g8ghX38GXohzOZ[O
+          url: jdbc:mysql://mysql-ali-test.xmars.com:3307/xplatform_sd?useUnicode=yes&characterEncoding=UTF-8
+          username: devops
+
+logging:
+  level:
+    root: debug

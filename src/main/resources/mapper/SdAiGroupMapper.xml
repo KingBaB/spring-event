@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cuizb.spring.event.mapper.SdAiGroupMapper">
+	<resultMap id="BaseResultMap" type="com.cuizb.spring.event.model.entity.SdAiGroup">
+            <result column="acos" property="acos" />
+	        <result column="budget_dynamic_status" property="budgetDynamicStatus" />
+	        <result column="campaign_name_sign" property="campaignNameSign" />
+	        <result column="create_by" property="createBy" />
+	        <result column="create_time" property="createTime" />
+	        <result column="deleted" property="deleted" />
+	        <result column="id" property="id" />
+	        <result column="intention" property="intention" />
+	        <result column="num" property="num" />
+	        <result column="num_type" property="numType" />
+	        <result column="profile_id" property="profileId" />
+	        <result column="smart_creation_name" property="smartCreationName" />
+	        <result column="status" property="status" />
+	        <result column="update_by" property="updateBy" />
+	        <result column="update_time" property="updateTime" />
+	        <result column="optimize_type" property="optimizeType" />
+		</resultMap>
+</mapper>
